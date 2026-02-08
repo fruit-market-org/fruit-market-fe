@@ -24,7 +24,6 @@ const LoginPage = () => {
       toast({
         title: "Validation error",
         description: "Please enter email and password.",
-        variant: "destructive",
       });
       return;
     }
@@ -39,7 +38,6 @@ const LoginPage = () => {
       toast({
         title: "Login failed",
         description: message,
-        variant: "destructive",
       });
     } finally {
       setLoading(false);

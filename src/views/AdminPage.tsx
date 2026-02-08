@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import { getMembers, createMember, updateMember, deleteMember } from "@/lib/members-api";
@@ -19,13 +19,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogFooter,
-} from "@/components/ui/dialog";
-import {
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -35,7 +28,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Label } from "@/components/ui/label";
 import { Search, Plus, Pencil, Trash2, LogOut } from "lucide-react";
 import { MemberFormDialog } from "@/components/admin/MemberFormDialog";
 
@@ -53,7 +45,7 @@ const AdminPage = () => {
 
   const debouncedSearch = useDebounce(searchQuery, 400);
 
-  const fetchMembers = () => {
+  const fetchMembers = useCallback(() => {
     setLoading(true);
     setError(null);
     getMembers(debouncedSearch)
@@ -63,11 +55,11 @@ const AdminPage = () => {
         setMembers([]);
       })
       .finally(() => setLoading(false));
-  };
+  }, [debouncedSearch]);
 
   useEffect(() => {
     fetchMembers();
-  }, [debouncedSearch]);
+  }, [fetchMembers]);
 
   const handleAddSubmit = async (payload: MemberFormPayload) => {
     try {
@@ -79,7 +71,6 @@ const AdminPage = () => {
       toast({
         title: "Failed to create member",
         description: err instanceof Error ? err.message : "Unknown error",
-        variant: "destructive",
       });
       throw err;
     }
@@ -101,7 +92,6 @@ const AdminPage = () => {
       toast({
         title: "Failed to update member",
         description: err instanceof Error ? err.message : "Unknown error",
-        variant: "destructive",
       });
       throw err;
     }
@@ -119,7 +109,6 @@ const AdminPage = () => {
       toast({
         title: "Failed to delete member",
         description: err instanceof Error ? err.message : "Unknown error",
-        variant: "destructive",
       });
     } finally {
       setDeleteLoading(false);
