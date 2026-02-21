@@ -40,12 +40,12 @@ export const HERO_SLIDES = [
   {
     title: "Trusted Merchants",
     subtitle: "Building relationships since 1952",
-    image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=1920&q=80",
   },
   {
     title: "Vibrant Marketplace",
     subtitle: "The heart of Gujarat's fruit trade",
-    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1528821128474-27f963b062bf?w=1920&q=80",
   },
 ];
 
@@ -151,14 +151,14 @@ export const GALLERY_IMAGES = [
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&q=80",
     alt: "Fruit market stall",
     category: "Marketplace",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",
-    alt: "Market vendors",
+    src: "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=800&q=80",
+    alt: "Fresh fruit baskets",
     category: "Marketplace",
   },
   {
@@ -175,9 +175,9 @@ export const GALLERY_IMAGES = [
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
-    alt: "Community gathering",
-    category: "Community",
+    src: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&q=80",
+    alt: "Fresh fruit platter",
+    category: "Fruits",
   },
   {
     id: 8,
@@ -187,8 +187,8 @@ export const GALLERY_IMAGES = [
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=800&q=80",
-    alt: "Annual event celebration",
+    src: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=800&q=80",
+    alt: "Seasonal fruit harvest",
     category: "Events",
   },
   {
@@ -199,14 +199,14 @@ export const GALLERY_IMAGES = [
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=800&q=80",
-    alt: "Grapes selection",
+    src: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=800&q=80",
+    alt: "Fresh apples",
     category: "Fruits",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?w=800&q=80",
-    alt: "Community meeting",
+    src: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=800&q=80",
+    alt: "Exotic fresh fruits",
     category: "Community",
   },
 ];

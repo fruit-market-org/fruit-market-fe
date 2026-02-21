@@ -126,7 +126,7 @@ const HomePage = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
                 <img
-                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80"
+                  src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=800&q=80"
                   alt="Fruit market"
                   className="w-full h-full object-cover"
                 />
