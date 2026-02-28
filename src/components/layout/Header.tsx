@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-muted/98 backdrop-blur supports-[backdrop-filter]:bg-muted/95">
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-25 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 shadow-soft bg-muted">
@@ -38,8 +38,8 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Full association name - hidden on smaller screens */}
-          <p className="hidden lg:block flex-1 text-center text-base lg:text-lg font-bold text-foreground px-4 truncate max-w-xl mx-4">
+          {/* Full association name - size controlled by .header-association-name in globals.css */}
+          <p className="header-association-name flex-1 min-w-0 text-center font-serif font-bold text-foreground px-2 sm:px-4 mx-2 sm:mx-4 line-clamp-2">
             {SITE_INFO.name}
           </p>
 
