@@ -21,13 +21,13 @@ const Header = () => {
         <div className="flex h-25 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 shadow-soft bg-muted">
+            <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 shadow-soft bg-muted">
               <Image
                 src={logo}
                 alt={`${SITE_INFO.shortName} logo`}
                 className="w-full h-full object-cover"
-                width={48}
-                height={48}
+                width={100}
+                height={100}
               />
             </div>
             <div className="hidden sm:block">
