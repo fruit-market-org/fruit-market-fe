@@ -83,7 +83,17 @@ const ContactPage = () => {
                   {iconMap[info.icon]}
                 </div>
                 <h3 className="font-serif font-semibold text-foreground mb-2">{info.title}</h3>
-                <p className="text-muted-foreground text-sm">{info.value}</p>
+                <p className="text-muted-foreground text-sm">
+                  {info.type === "address" ? (
+                    <>
+                      {SITE_INFO.address}
+                      <br />
+                      {SITE_INFO.addressLine2}
+                    </>
+                  ) : (
+                    info.value
+                  )}
+                </p>
               </div>
             ))}
           </div>
@@ -200,16 +210,16 @@ const ContactPage = () => {
 
             {/* Map / Location */}
             <div className="space-y-8">
-              <div className="bg-card rounded-3xl overflow-hidden shadow-elevated border border-border/50 h-96">
+              <div className="bg-card rounded-3xl overflow-hidden shadow-elevated border border-border/50 aspect-[4/3] min-h-[300px] w-full">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.4!2d72.58!3d23.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzI0LjAiTiA3MsKwMzQnNDguMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117537.22899004206!2d72.53118689388133!3d22.98561516043225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e87db6063d53f%3A0x310356a80bbebfa3!2sAhmedabad%20Naroda%20Fruit%20Market!5e0!3m2!1sen!2sin!4v1772298160357!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Location Map"
+                  title="Ahmedabad Naroda Fruit Market - TAWFMA Location"
                 />
               </div>
 
@@ -223,8 +233,12 @@ const ContactPage = () => {
                   with our team.
                 </p>
                 <div className="flex items-center gap-3 text-foreground">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span className="font-medium">{SITE_INFO.address}</span>
+                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="font-medium">
+                    {SITE_INFO.address}
+                    <br />
+                    {SITE_INFO.addressLine2}
+                  </span>
                 </div>
               </div>
             </div>
