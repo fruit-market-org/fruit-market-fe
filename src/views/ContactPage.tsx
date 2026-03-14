@@ -66,7 +66,6 @@ const ContactPage = () => {
       toast({
         title: "Failed to send message.",
         description: "Something went wrong. Please try again.",
-        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
