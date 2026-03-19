@@ -1,5 +1,21 @@
+import Image from "next/image";
 import { ABOUT_CONTENT } from "@/constants";
 import { Award, Scale, Users, Lightbulb, Target, Eye } from "lucide-react";
+
+import historyImage from "@/assets/images/fruits_6.jpeg";
+import strip1 from "@/assets/images/fruits_7.jpeg";
+import strip2 from "@/assets/images/fruits_8.jpeg";
+import strip3 from "@/assets/images/fruits_9.jpeg";
+import strip4 from "@/assets/images/fruits_10.jpeg";
+import strip5 from "@/assets/images/fruits_11.jpeg";
+
+const GALLERY_STRIP_IMAGES = [
+  { src: strip1, alt: "Fresh fruits" },
+  { src: strip2, alt: "Fruit variety" },
+  { src: strip3, alt: "Market produce" },
+  { src: strip4, alt: "Quality fruits" },
+  { src: strip5, alt: "Fruit display" },
+];
 
 const iconMap: Record<string, React.ReactNode> = {
   award: <Award className="w-8 h-8" />,
@@ -63,14 +79,15 @@ const AboutPage = () => {
             </div>
             <div className="order-1 lg:order-2 relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-elevated">
-                <img
-                  src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80"
+                <Image
+                  src={historyImage}
                   alt="Our history"
                   className="w-full h-full object-cover"
+                  placeholder="blur"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-card hidden md:block">
-                <div className="text-4xl font-serif font-bold">1952</div>
+                <div className="text-4xl font-serif font-bold">1961</div>
                 <div className="text-sm text-primary-foreground/80">Year Established</div>
               </div>
             </div>
@@ -142,15 +159,14 @@ const AboutPage = () => {
       {/* Image Gallery Strip */}
       <section className="py-12 overflow-hidden">
         <div className="flex gap-4 animate-slide-in">
-          {[
-            "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400&q=80",
-            "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=400&q=80",
-            "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&q=80",
-            "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=400&q=80",
-            "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&q=80",
-          ].map((src, index) => (
+          {GALLERY_STRIP_IMAGES.map((item, index) => (
             <div key={index} className="w-72 h-48 flex-shrink-0 rounded-xl overflow-hidden">
-              <img src={src} alt={`Gallery ${index + 1}`} className="w-full h-full object-cover" />
+              <Image
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-full object-cover"
+                placeholder="blur"
+              />
             </div>
           ))}
         </div>

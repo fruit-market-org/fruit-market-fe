@@ -71,7 +71,7 @@ function CommitteeMemberAvatar({
       )}
     >
       {imageUrl ? (
-        <AvatarImage src={imageUrl} alt={name} className="object-cover" />
+        <AvatarImage src={imageUrl} alt={name} className="object-cover object-top" />
       ) : null}
       <AvatarFallback className="rounded-lg bg-muted">
         <UserIcon className={cn("text-muted-foreground", iconSizes[size])} />
@@ -129,6 +129,28 @@ function CurrentCommitteeHierarchy({
         {member.name}
       </p>
       <p className="text-sm text-muted-foreground">({member.designation})</p>
+      <div className="mt-3 space-y-1.5 w-full text-left text-sm">
+        <div className="flex items-center justify-center gap-2 text-muted-foreground min-h-[1.25rem]">
+          <Mail className="w-4 h-4 flex-shrink-0 text-primary" />
+          {member.email ? (
+            <a href={`mailto:${member.email}`} className="hover:underline truncate" title={member.email}>
+              {member.email}
+            </a>
+          ) : (
+            <span>-</span>
+          )}
+        </div>
+        <div className="flex items-center justify-center gap-2 text-muted-foreground min-h-[1.25rem]">
+          <Phone className="w-4 h-4 flex-shrink-0 text-primary" />
+          {member.phoneNumber ? (
+            <a href={`tel:${member.phoneNumber}`} className="hover:underline truncate" title={member.phoneNumber}>
+              {member.phoneNumber}
+            </a>
+          ) : (
+            <span>-</span>
+          )}
+        </div>
+      </div>
     </div>
   );
 

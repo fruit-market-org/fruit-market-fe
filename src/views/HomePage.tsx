@@ -1,10 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { HERO_CONTENT, HERO_SLIDES, ABOUT_CONTENT, SITE_INFO } from "@/constants";
 import { ChevronLeft, ChevronRight, ArrowRight, Award, Scale, Users, Lightbulb } from "lucide-react";
 import { useState, useEffect } from "react";
+
+import hero1 from "@/assets/images/fruits_1.jpeg";
+import hero2 from "@/assets/images/fruits_2.jpeg";
+import hero3 from "@/assets/images/fruits_11.jpeg";
+import aboutMain from "@/assets/images/fruits_4.jpeg";
+import aboutSecondary from "@/assets/images/fruits_5.jpeg";
+
+const HERO_IMAGES = [hero1, hero2, hero3];
 
 const iconMap: Record<string, React.ReactNode> = {
   award: <Award className="w-8 h-8" />,
@@ -40,7 +49,7 @@ const HomePage = () => {
           >
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              style={{ backgroundImage: `url(${HERO_IMAGES[index].src})` }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-transparent" />
           </div>
@@ -125,17 +134,19 @@ const HomePage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
-                <img
-                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80"
+                <Image
+                  src={aboutMain}
                   alt="Fruit market"
                   className="w-full h-full object-cover"
+                  placeholder="blur"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-card border-4 border-background hidden md:block">
-                <img
-                  src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400&q=80"
+                <Image
+                  src={aboutSecondary}
                   alt="Fresh fruits"
                   className="w-full h-full object-cover"
+                  placeholder="blur"
                 />
               </div>
             </div>

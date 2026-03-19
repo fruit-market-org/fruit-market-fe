@@ -5,13 +5,14 @@
 
 export const SITE_INFO = {
   name: "The Ahmedabad Wholesale Fruit Merchants Association",
-  shortName: "AWFMA",
-  tagline: "Uniting Fruit Merchants Since 1952",
+  shortName: "TAWFMA",
+  tagline: "Uniting Fruit Merchants Since 1961",
   description: "The premier association of wholesale fruit merchants in Ahmedabad, dedicated to promoting fair trade, quality standards, and community welfare among fruit traders.",
-  address: "Ahmedabad Fruit Market Complex, Jamalpur, Ahmedabad - 380022, Gujarat, India",
-  phone: "+91 79 2535 1234",
-  email: "info@awfma.org",
-  workingHours: "Monday - Saturday: 4:00 AM - 8:00 PM",
+  address: "114/115, G.M Market, Mangal Jetha Compound, New Fruit Market, Naroda Road, Ahmedabad - 382330, Gujarat, India",
+  addressLine2: "Nr. Gate No. 4, Nr. Ramapir Mandir, Main Road, New Fruit Market, Naroda Road, Ahmedabad - 382330",
+  phone: "+91 9913148787",
+  email: "tawfma2026@gmail.com",
+  workingHours: "Monday - Saturday: 5:00 AM - 8:00 PM",
 };
 
 export const NAV_LINKS = [
@@ -31,28 +32,26 @@ export const HERO_CONTENT = {
   secondaryCtaText: "Contact Us",
 };
 
+// Hero slide images are imported from @/assets/images in HomePage
 export const HERO_SLIDES = [
   {
     title: "Quality Fresh Fruits",
     subtitle: "From farm to market with care",
-    image: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=1920&q=80",
   },
   {
     title: "Trusted Merchants",
-    subtitle: "Building relationships since 1952",
-    image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1920&q=80",
+    subtitle: "Building relationships since 1961",
   },
   {
     title: "Vibrant Marketplace",
     subtitle: "The heart of Gujarat's fruit trade",
-    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&q=80",
   },
 ];
 
 export const ABOUT_CONTENT = {
   title: "About Our Association",
   subtitle: "A Legacy of Trust and Quality",
-  history: `The Ahmedabad Wholesale Fruit Merchants Association was established in 1952 with a vision to organize and uplift the fruit trading community of Ahmedabad. What started as a small group of dedicated merchants has now grown into one of the most respected trade associations in Gujarat.
+  history: `The Ahmedabad Wholesale Fruit Merchants Association was established in 1961 with a vision to organize and uplift the fruit trading community of Ahmedabad. What started as a small group of dedicated merchants has now grown into one of the most respected trade associations in Gujarat.
 
 Our founders believed in the power of unity and fair trade practices. They laid the foundation for an organization that would not only protect the interests of its members but also ensure that consumers receive the freshest and highest quality fruits.
 
@@ -83,7 +82,7 @@ Over the decades, we have witnessed the transformation of Ahmedabad's fruit mark
   ],
   stats: [
     { value: "70+", label: "Years of Legacy" },
-    { value: "500+", label: "Active Members" },
+    { value: "250+", label: "Active Members" },
     { value: "1000+", label: "Tons Daily Trade" },
     { value: "100+", label: "Fruit Varieties" },
   ],
@@ -133,86 +132,42 @@ export const GALLERY_CONTENT = {
   title: "Our Gallery",
   subtitle: "Glimpses of Our Vibrant Community",
   description: "Explore moments captured from our bustling marketplace, community events, and the beautiful array of fresh fruits we trade.",
-  categories: ["All", "Marketplace", "Events", "Fruits", "Community"],
+  categories: ["All", "Fruits", "Marketplace", "Events"],
 };
 
+// Order interleaved (Fruits / Marketplace) so "All" shows a mixed gallery
 export const GALLERY_IMAGES = [
-  {
-    id: 1,
-    src: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&q=80",
-    alt: "Colorful fruit display",
-    category: "Fruits",
-  },
-  {
-    id: 2,
-    src: "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=800&q=80",
-    alt: "Fresh mangoes",
-    category: "Fruits",
-  },
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
-    alt: "Fruit market stall",
-    category: "Marketplace",
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",
-    alt: "Market vendors",
-    category: "Marketplace",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=800&q=80",
-    alt: "Fresh citrus fruits",
-    category: "Fruits",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1595475207225-428b62bda831?w=800&q=80",
-    alt: "Watermelons",
-    category: "Fruits",
-  },
-  {
-    id: 7,
-    src: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
-    alt: "Community gathering",
-    category: "Community",
-  },
-  {
-    id: 8,
-    src: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=800&q=80",
-    alt: "Tropical fruits",
-    category: "Fruits",
-  },
-  {
-    id: 9,
-    src: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=800&q=80",
-    alt: "Annual event celebration",
-    category: "Events",
-  },
-  {
-    id: 10,
-    src: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=800&q=80",
-    alt: "Apple varieties",
-    category: "Fruits",
-  },
-  {
-    id: 11,
-    src: "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=800&q=80",
-    alt: "Grapes selection",
-    category: "Fruits",
-  },
-  {
-    id: 12,
-    src: "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?w=800&q=80",
-    alt: "Community meeting",
-    category: "Community",
-  },
+  { id: 1, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295600/fruits_1_sppqqf.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 13, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291355/marketplace_1_uxu4cv.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 2, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295597/fruits_2_bqaha4.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 14, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291353/marketplace_2_c82drc.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 3, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295596/fruits_3_jqwlvt.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 15, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291353/marketplace_3_hcwda9.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 4, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295593/fruits_4_f8hciw.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 16, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291352/marketplace_4_st8xy0.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 5, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295592/fruits_5_aoffsm.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 17, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291351/marketplace_5_psmewz.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 6, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295590/fruits_6_o16lmq.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 18, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291349/marketplace_6_bc5rzq.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 7, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295587/fruits_7_qwxicf.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 19, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291348/marketplace_14_rbem7o.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 8, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295584/fruits_8_vscljt.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 20, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291348/marketplace_7_jv9zkv.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 9, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295583/fruits_9_ekgjfr.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 21, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291348/marketplace_8_yj3r8m.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 10, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295577/fruits_11_ypynea.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 22, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291348/marketplace_13_r9tebq.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 11, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295577/fruits_12_kjgbuy.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 23, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291347/marketplace_10_hdd1x5.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 12, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772295576/fruits_13_zfjqdn.jpg", alt: "Fresh fruits", category: "Fruits" },
+  { id: 24, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291347/marketplace_9_tjxhxf.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 25, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291347/marketplace_15_wmknau.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 26, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291347/marketplace_11_lrrvc4.jpg", alt: "Marketplace", category: "Marketplace" },
+  { id: 27, src: "https://res.cloudinary.com/dqywdfgik/image/upload/v1772291347/marketplace_12_yoerlz.jpg", alt: "Marketplace", category: "Marketplace" },
 ];
 
 export const FOOTER_CONTENT = {
-  description: "Serving the fruit trade community of Ahmedabad with dedication and integrity since 1952.",
+  description: "Serving the fruit trade community of Ahmedabad with dedication and integrity since 1961.",
   quickLinks: NAV_LINKS,
   socialLinks: [
     { name: "Facebook", url: "https://facebook.com", icon: "facebook" },

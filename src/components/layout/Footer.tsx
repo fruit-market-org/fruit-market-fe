@@ -1,15 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_INFO, FOOTER_CONTENT, NAV_LINKS } from "@/constants";
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Shield } from "lucide-react";
 
-const iconMap: Record<string, React.ReactNode> = {
-  facebook: <Facebook className="w-5 h-5" />,
-  twitter: <Twitter className="w-5 h-5" />,
-  instagram: <Instagram className="w-5 h-5" />,
-  linkedin: <Linkedin className="w-5 h-5" />,
-};
+import logo from "@/assets/images/fruit_market_logo.png";
 
 const Footer = () => {
   return (
@@ -20,32 +16,30 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-xl font-serif font-bold text-primary-foreground">A</span>
+              <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-muted">
+                <Image
+                  src={logo}
+                  alt={`${SITE_INFO.shortName} logo`}
+                  className="w-full h-full object-cover"
+                  width={48}
+                  height={48}
+                />
               </div>
               <div>
                 <h3 className="text-lg font-serif font-bold">{SITE_INFO.shortName}</h3>
-                <p className="text-xs text-background/60">Since 1952</p>
+                <p className="text-xs text-background/60">Since 1961</p>
               </div>
             </div>
             <p className="text-background/70 text-sm leading-relaxed mb-6">
               {FOOTER_CONTENT.description}
             </p>
-            {/* Social Links */}
-            <div className="flex gap-3">
-              {FOOTER_CONTENT.socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
-                  aria-label={social.name}
-                >
-                  {iconMap[social.icon]}
-                </a>
-              ))}
-            </div>
+            <Link
+              href="/admin"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-background/10 text-background/90 hover:bg-primary hover:text-primary-foreground transition-colors duration-200 text-sm font-medium"
+            >
+              <Shield className="w-4 h-4" />
+              Admin
+            </Link>
           </div>
 
           {/* Quick Links */}
@@ -75,7 +69,11 @@ const Footer = () => {
                 </div>
                 <div>
                   <h5 className="font-medium text-sm mb-1">Address</h5>
-                  <p className="text-background/70 text-sm">{SITE_INFO.address}</p>
+                  <p className="text-background/70 text-sm">
+                    {SITE_INFO.address}
+                    <br />
+                    {SITE_INFO.addressLine2}
+                  </p>
                 </div>
               </div>
               <div className="flex gap-3">
