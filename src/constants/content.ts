@@ -147,7 +147,6 @@ export const GALLERY_IMAGES = [
   { id: 16, src: "https://res.cloudinary.com/dvzm9icmq/image/upload/v1773943335/marketplace_4_o2gauz.jpg", alt: "Marketplace", category: "Marketplace" },
   { id: 5, src: "https://res.cloudinary.com/dvzm9icmq/image/upload/v1773943357/fruits_5_wdnyid.jpg", alt: "Fresh fruits", category: "Fruits" },
   { id: 17, src: "https://res.cloudinary.com/dvzm9icmq/image/upload/v1773943336/marketplace_5_cgft92.jpg", alt: "Marketplace", category: "Marketplace" },
-  { id: 6, src: "https://res.cloudinary.com/dvzm9icmq/image/upload/v1773943354/fruits_6_kh9cyn.jpg", alt: "Fresh fruits", category: "Fruits" },
   { id: 18, src: "https://res.cloudinary.com/dvzm9icmq/image/upload/v1773943333/marketplace_6_m1dwyu.jpg", alt: "Marketplace", category: "Marketplace" },
   { id: 7, src: "https://res.cloudinary.com/dvzm9icmq/image/upload/v1773943351/fruits_7_pprck3.jpg", alt: "Fresh fruits", category: "Fruits" },
   { id: 19, src: "https://res.cloudinary.com/dvzm9icmq/image/upload/v1773943316/marketplace_14_u6y0we.jpg", alt: "Marketplace", category: "Marketplace" },

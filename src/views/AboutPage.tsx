@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ABOUT_CONTENT } from "@/constants";
 import { Award, Scale, Users, Lightbulb, Target, Eye } from "lucide-react";
 
-import historyImage from "@/assets/images/fruits_6.jpeg";
+import historyImage from "@/assets/images/fruits_4.jpeg";
 import strip1 from "@/assets/images/fruits_7.jpeg";
 import strip2 from "@/assets/images/fruits_8.jpeg";
 import strip3 from "@/assets/images/fruits_9.jpeg";
